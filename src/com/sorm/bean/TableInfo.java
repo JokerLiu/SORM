@@ -1,5 +1,6 @@
 package com.sorm.bean;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,6 +24,8 @@ public class TableInfo {
 	 * 唯一主键
 	 */
 	private ColumnInfo onlyPriKey;
+
+	private List<ColumnInfo> priKeys;
 
 	public String getTname() {
 		return tname;
@@ -48,14 +51,22 @@ public class TableInfo {
 		this.onlyPriKey = onlyPriKey;
 	}
 
-	public TableInfo(String tname, Map<String, ColumnInfo> columns, ColumnInfo onlyPriKey) {
+	public List<ColumnInfo> getPriKeys() {
+		return priKeys;
+	}
+
+	public void setPriKeys(List<ColumnInfo> priKeys) {
+		this.priKeys = priKeys;
+	}
+
+	public TableInfo(String tname, List<ColumnInfo> priKeys, Map<String, ColumnInfo> columns) {
 		super();
 		this.tname = tname;
 		this.columns = columns;
-		this.onlyPriKey = onlyPriKey;
+		this.priKeys = priKeys;
 	}
 
 	public TableInfo() {
-		
+
 	}
 }
