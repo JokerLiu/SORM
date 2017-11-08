@@ -1,7 +1,7 @@
 package com.sorm.core;
 
 /**
- * ¸ºÔğ²éÑ¯£¨¸ºÔğ¶ÔÍâ²éÑ¯ºËĞÄ½Ó¿Ú£©
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Ä½Ó¿Ú£ï¿½
  * 
  * @author Joker
  *
@@ -9,19 +9,28 @@ package com.sorm.core;
 public interface Query {
 
 	/**
-	 * Ö´ĞĞÒ»¸öDMLÓï¾ä
+	 * Ö´ï¿½ï¿½Ò»ï¿½ï¿½DMLï¿½ï¿½ï¿½
 	 * 
 	 * @param sql
-	 *            ´«ÈësqlÓï¾ä
+	 *            ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½
 	 * @param params
-	 *            Õ¼Î»·û ? ²ÎÊı
-	 * @return Ö´ĞĞsqlÓï¾äºóÓ°Ïì¼ÇÂ¼µÄĞĞÊı
+	 *            Õ¼Î»ï¿½ï¿½ ? ï¿½ï¿½ï¿½ï¿½
+	 * @return Ö´ï¿½ï¿½sqlï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public int excuteDML(String sql, Object[] params);
-	
+
 	/**
-	 * ÍùÊı¾İ¿âÖĞĞÂÔöÒ»Ìõ¼ÇÂ¼
+	 * ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Â¼
+	 * 
 	 * @param object
 	 */
 	public void insert(Object object);
+
+	/**
+	 * æ ¹æ®idåˆ é™¤æ•°æ®åº“çš„ä¸€æ¡è®°å½•
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public int delete(String id);
 }
