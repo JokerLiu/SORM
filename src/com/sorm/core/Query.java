@@ -1,7 +1,7 @@
 package com.sorm.core;
 
 /**
- * �����ѯ����������ѯ���Ľӿڣ�
+ * 提供查询服务核心接口
  * 
  * @author Joker
  *
@@ -9,18 +9,18 @@ package com.sorm.core;
 public interface Query {
 
 	/**
-	 * ִ��һ��DML���
+	 * 执行一条sql语句
 	 * 
 	 * @param sql
-	 *            ����sql���
+	 *            sql
 	 * @param params
-	 *            ռλ�� ? ����
-	 * @return ִ��sql����Ӱ���¼������
+	 *            传入参数
+	 * @return int
 	 */
 	public int excuteDML(String sql, Object[] params);
 
 	/**
-	 * ����ݿ�������һ����¼
+	 * 往数据库插入一条记录
 	 * 
 	 * @param object
 	 */
