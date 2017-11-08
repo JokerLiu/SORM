@@ -1,7 +1,7 @@
 package com.sorm.utils;
 
 /**
- * 封装采用的Java文件操作
+ * 封装生成Java源代码操作
  * 
  * @author Joker
  *
